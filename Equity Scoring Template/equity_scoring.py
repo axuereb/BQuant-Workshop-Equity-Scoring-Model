@@ -174,6 +174,6 @@ class EquityScoringApp(VBox):
         self.title = title
         self.description = description
         self.logger = ApplicationLogger()
-        self.app = EquityScoring(factors=factors, col_defs=col_defs, connection=connection, logger=self.logger)
-        super().__init__(children=[AppTitle(title=self.title, description=description), self.app, self.logger])
+        self.app = EquityScoring(factors=factors, col_defs=col_defs, connection=connection)
+        super().__init__(children=[AppTitle(title=self.title, description=description), self.app])
     
